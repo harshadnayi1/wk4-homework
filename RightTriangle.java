@@ -1,24 +1,32 @@
 package Week4_homework;
 
+import java.sql.SQLOutput;
+
 // Java code to demonstrate star patterns
 public class RightTriangle {
 
     // Function to demonstrate printing pattern
     public static void printStars(int n) {
-        int row, colm;
+        int row, colm, space;
 
         // outer loop to handle number of rows
         //  n in this case
         for(row=1; row<=n; row++) {
-            //  inner loop to handle number of columns
-            //  values changing acc. to outer loop
-            //for every row, run the colm
-            for(colm=1;  colm<=row; colm++)
-            {
-                // printing stars
-                System.out.print("* ");
-            }
 
+            for(space=0; space<(n-row); space++) {
+                // printing space
+                System.out.print(" ");
+            }
+            for (colm = row; colm>=1; colm--){
+
+                System.out.print("*");
+
+            }
+//            for (colm = 2; colm <= row; colm++){
+//                System.out.print(colm);
+//
+//
+//            }
             // ending line after each row
             System.out.println();
         }
